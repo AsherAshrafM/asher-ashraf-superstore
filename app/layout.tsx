@@ -1,9 +1,10 @@
-import './globals.css'
+import "./globals.css";
+import MainNavbar from "./MainNavbar";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -12,7 +13,10 @@ export default function RootLayout({
         <meta name="description" content="Asher and Ashraf Superstore" />
         <link rel="icon" href="/favicon.ico" />
       </head>
-      <body>{children}</body>
+      <body>
+        <MainNavbar />
+        <main>{children}</main>
+      </body>
     </html>
-  )
+  );
 }
